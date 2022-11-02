@@ -15,12 +15,12 @@ const ESCAPE = /[nrt\\'"]/
 const DECIMAL_NUM = /[0-9][0-9_]*/
 const HEX_NUM = /0x[0-9a-fA-F][0-9a-fA-F_]*/
 
-const FLOAT = [
-  /[0-9][0-9_]*\.(?:[0-9][0-9_]*)?/,
-  /[0-9][0-9_]*(?:\.(?:[0-9][0-9_]*)?)?(?:e|E)(?:\+|-)?[0-9][0-9_]*/,
-  /0x[0-9a-fA-F][0-9a-fA-F_]*\.(?:[0-9a-fA-F][0-9a-fA-F_]*)/,
-  /0x[0-9a-fA-F][0-9a-fA-F_]*(?:\.(?:[0-9a-fA-F][0-9a-fA-F_]*)?)?(?:p|P)(?:\+|-)?[0-9a-fA-F][0-9a-fA-F_]*/
-];
+//const FLOAT = [
+//  /[0-9][0-9_]*\.(?:[0-9][0-9_]*)?/,
+//  /[0-9][0-9_]*(?:\.(?:[0-9][0-9_]*)?)?(?:e|E)(?:\+|-)?[0-9][0-9_]*/,
+//  /0x[0-9a-fA-F][0-9a-fA-F_]*\.(?:[0-9a-fA-F][0-9a-fA-F_]*)/,
+//  /0x[0-9a-fA-F][0-9a-fA-F_]*(?:\.(?:[0-9a-fA-F][0-9a-fA-F_]*)?)?(?:p|P)(?:\+|-)?[0-9a-fA-F][0-9a-fA-F_]*/
+//];
 
 const UTF8_ENC = [
   /[\xc2-\xdf][\x80-\xbf]/, 
@@ -102,7 +102,7 @@ module.exports = grammar({
        "nat8",
        "nat16",
        "nat32",
-       "nat64" ,
+       "nat64",
        "int",
        "int8",
        "int16",
@@ -143,9 +143,9 @@ module.exports = grammar({
     
     linecomment: () => token(seq("//", /.*/)),
    
-    int: () => seq(optional(choice("+", "-")), DECIMAL_NUM),
+    //int: () => seq(optional(choice("+", "-")), DECIMAL_NUM),
     nat: () => choice(DECIMAL_NUM, HEX_NUM),
-    float: () => choice(...FLOAT),
+    //float: () => choice(...FLOAT),
     
     utf8_enc: () => choice(...UTF8_ENC),
     

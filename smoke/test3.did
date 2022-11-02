@@ -1,0 +1,6 @@
+service : {
+  addUser : (name : text, age : nat8) -> (id : nat64);
+  userName : (id : nat64) -> (text) query;
+  userAge : (id : nat64) -> (nat8) query;
+  deleteUser : (id : nat64) -> () oneway;
+}

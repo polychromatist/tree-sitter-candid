@@ -823,36 +823,6 @@
         ]
       }
     },
-    "int": {
-      "type": "SEQ",
-      "members": [
-        {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "CHOICE",
-              "members": [
-                {
-                  "type": "STRING",
-                  "value": "+"
-                },
-                {
-                  "type": "STRING",
-                  "value": "-"
-                }
-              ]
-            },
-            {
-              "type": "BLANK"
-            }
-          ]
-        },
-        {
-          "type": "PATTERN",
-          "value": "[0-9][0-9_]*"
-        }
-      ]
-    },
     "nat": {
       "type": "CHOICE",
       "members": [
@@ -863,27 +833,6 @@
         {
           "type": "PATTERN",
           "value": "0x[0-9a-fA-F][0-9a-fA-F_]*"
-        }
-      ]
-    },
-    "float": {
-      "type": "CHOICE",
-      "members": [
-        {
-          "type": "PATTERN",
-          "value": "[0-9][0-9_]*\\.(?:[0-9][0-9_]*)?"
-        },
-        {
-          "type": "PATTERN",
-          "value": "[0-9][0-9_]*(?:\\.(?:[0-9][0-9_]*)?)?(?:e|E)(?:\\+|-)?[0-9][0-9_]*"
-        },
-        {
-          "type": "PATTERN",
-          "value": "0x[0-9a-fA-F][0-9a-fA-F_]*\\.(?:[0-9a-fA-F][0-9a-fA-F_]*)"
-        },
-        {
-          "type": "PATTERN",
-          "value": "0x[0-9a-fA-F][0-9a-fA-F_]*(?:\\.(?:[0-9a-fA-F][0-9a-fA-F_]*)?)?(?:p|P)(?:\\+|-)?[0-9a-fA-F][0-9a-fA-F_]*"
         }
       ]
     },
