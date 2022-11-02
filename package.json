@@ -1,0 +1,29 @@
+{
+  "name": "tree-sitter-candid",
+  "version": "0.1.0",
+  "description": "tree-sitter for candid",
+  "main": "grammar.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tree-sitter",
+    "candid",
+    "ic",
+    "dfinity"
+  ],
+  "author": "polychromatist",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "nan": "^2.17.0"
+  },
+  "tree-sitter": [
+    {
+      "scope": "source.did",
+      "file-types": [
+        "did"
+      ],
+      "first-line-regex": ""
+    }
+  ]
+}

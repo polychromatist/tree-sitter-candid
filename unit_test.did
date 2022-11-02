@@ -1,0 +1,2 @@
+type A2 = record { foo : int32; bar : bool; bat: VariantList; baz: A1; bbb: List; bib: variant { foo; bar }; bab: A1 };
+type A3 = record { bib: variant { foo; bar }; };

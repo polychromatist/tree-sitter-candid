@@ -1,0 +1,13 @@
+type Opt = opt Opt;
+type Vec = vec Vec;
+type EmptyRecord = record { EmptyRecord };
+type OptRec = opt record { OptRec };
+
+type List = opt record { head : int; tail : List };
+type List1 = opt List2;
+type List2 = record { head : int; tail : List1 };
+type EmptyVariant = variant { 0: EmptyVariant };
+type VariantList = variant { nil; cons: record { head : int; tail : VariantList } };
+
+type A1 = record { foo : int32; bar : bool };
+type A2 = record { foo : int32; bar : bool; bat: VariantList; baz: A1; bbb: List; bib: variant { foo; bar }; bab: A1 };
